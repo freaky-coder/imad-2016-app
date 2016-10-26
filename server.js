@@ -40,7 +40,7 @@ var articles= {
   articleThree= {title: 'Article Three| Freaky Coder',
   heading: 'Article Three',
   date: '26 Oct 2016',
-  content: <p>
+  content: `<p>
                             This is the content of third article. This is the content of third article
                             </p>
                             <p>
