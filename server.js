@@ -20,11 +20,17 @@ var articleOne={
                                 </p>`
 };
 
-var htmlTemplate= `
+function createTemplate(data){
+    var title= data.title;
+    var heading= data.heading;
+    var date= data.date;
+    var content= data.content;   
+   
+    var htmlTemplate= `
     <html>
         <head>
             <title>
-                Article-One | Freaky Coder
+                ${title}
             </title>
             <meta name="viewport" content="width-device-width, initial-scale=1"/>
         <link href="/ui/style.css" rel="stylesheet" />
@@ -37,28 +43,19 @@ var htmlTemplate= `
                         </div>
                         <hr/>
                         <h3>
-                            Article One
+                            ${heading}
                             </h3>
                             <div>
-                                Oct 25, 2016
+                                ${date}
                             </div>
                             <div>
-                                <p>
-                                    This is the content of first article. This is the content of first article
-                                    </p>
-                                    <p>
-                                    This is the content of first article. This is the content of first article
-                                    </p>
-                                    <p>
-                                     This is the content of first article. This is the content of first article
-                                    </p>
+                                ${content}
                                 </div>
                       </div>
                     </body>
     </html>
 `;
-
-
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
