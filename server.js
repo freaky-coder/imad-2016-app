@@ -66,7 +66,6 @@ function createTemplate(data){
             <meta name="viewport" content="width-device-width, initial-scale=1"/>
         <link href="/ui/style.css" rel="stylesheet" />
             </head>
-            
                 <body>
                     <div class="container">
                     <div>
@@ -97,7 +96,7 @@ app.get('/:articleName',function(req,res){
     // article name== article-one
     //articles[articleName]=={} content objecr for article one
     var articleName=req.params.articleName;
-  res.send(createTemplate(articles[articleName]));
+    res.send(createTemplate(articles[articleName]));
 });
 
 
