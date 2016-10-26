@@ -36,8 +36,7 @@ var articles= {
                             This is the content of second article.This is the content of second article.This is the content of second article.
                             </p> `
     },
-        
-  articleThree : {title: 'Article Three| Freaky Coder',
+ articleThree : {title: 'Article Three| Freaky Coder',
   heading: 'Article Three',
   date: '26 Oct 2016',
   content: `<p>
