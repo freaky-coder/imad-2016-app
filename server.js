@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 
 var articles= {
- 'article-one' : {
+ 'articleOne' : {
   title: 'Article One| Freaky Coder',
   heading: 'Article One',
   date: '26 Oct 2016',
@@ -93,7 +93,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get(':/articleName',function(req,res){
+app.get('/:articleName',function(req,res){
     // article name== article-one
     //articles[articleName]=={} content objecr for article one
     var articleName=req.params.articleName;
