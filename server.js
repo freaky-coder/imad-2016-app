@@ -5,6 +5,21 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleOne={
+  title: 'Article One| Freaky Coder',
+  heading: 'Article One',
+  date: '26 Oct 2016',
+  content:` <p>
+                                This is the content of first article. This is the content of first article
+                                </p>
+                                <p>
+                                This is the content of first article. This is the content of first article
+                                </p>
+                                <p>
+                                 This is the content of first article. This is the content of first article
+                                </p>`
+};
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -12,6 +27,7 @@ app.get('/', function (req, res) {
 app.get('/article-one',function(req,res){
   res.sendFile(path.join(__dirname, 'ui', 'article-one.html')); 
 });
+
 
 app.get('/article-two',function(req,res){
   res.sendFile(path.join(__dirname, 'ui', 'article-two.html')); 
