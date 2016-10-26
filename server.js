@@ -101,10 +101,6 @@ app.get('/:articleName',function(req,res){
 });
 
 
-app.get('/article-four',function(req,res){
-  res.send('Article four Url is requested and will be servbed here.');  
-});
-
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
