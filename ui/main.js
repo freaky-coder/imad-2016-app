@@ -1,5 +1,5 @@
 console.log('Loaded!');
-// Change the tesxt of main file
+// Change the text of main HTML file
 
 var element = document.getElementById('element');
 
